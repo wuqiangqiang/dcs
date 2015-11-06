@@ -1,0 +1,8 @@
+﻿<Window x:Class="FoodSafetyMonitoring.Manager.Importing_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="180" Height="50" WindowStyle="None" WindowStartupLocation="CenterScreen" BorderBrush="Transparent" ResizeMode="NoResize" Background="#c5caca">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <TextBlock FontFamily="微软雅黑" FontSize="16">导入中...</TextBlock>
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+D:\20150707\zrdsys\DBUtility\bin\Debug\DBUtility.dll
+D:\20150707\zrdsys\DBUtility\bin\Debug\DBUtility.pdb
+D:\20150707\zrdsys\DBUtility\bin\Debug\MySql.Data.dll
+D:\20150707\zrdsys\DBUtility\obj\Debug\DBUtility.dll
+D:\20150707\zrdsys\DBUtility\obj\Debug\DBUtility.pdb
+D:\湖北老平台新版本连正式库\easyfood\DBUtility\bin\Debug\DBUtility.dll
+D:\湖北老平台新版本连正式库\easyfood\DBUtility\bin\Debug\DBUtility.pdb
+D:\湖北老平台新版本连正式库\easyfood\DBUtility\bin\Debug\MySql.Data.dll
+D:\湖北老平台新版本连正式库\easyfood\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\湖北老平台新版本连正式库\easyfood\DBUtility\obj\Debug\DBUtility.dll
+D:\湖北老平台新版本连正式库\easyfood\DBUtility\obj\Debug\DBUtility.pdb

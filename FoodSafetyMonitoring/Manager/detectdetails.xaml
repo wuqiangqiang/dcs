@@ -1,0 +1,72 @@
+﻿<Window x:Class="FoodSafetyMonitoring.Manager.detectdetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Width="498" Height="572" WindowStyle="None"  WindowStartupLocation="CenterScreen" BorderBrush="Transparent" ResizeMode="NoResize" Background="Transparent" AllowsTransparency ="True">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/TextBlock.xaml"/>
+                <ResourceDictionary Source="Themes/StackPanel.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../res/details.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="7,6,7,0">
+            <Thumb Width="440" Height="40" Background="Transparent" Opacity="0" DragDelta="Thumb_DragDelta" HorizontalAlignment="Left"></Thumb>
+            <TextBlock Height="20" Width="160" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Center" Foreground="White">生产加工环节检测信息详情</TextBlock>
+            <Image  Width="29" Height="26" Source="/res/close.png" x:Name="exit" MouseDown="exit_MouseDown" MouseEnter="exit_MouseEnter" MouseLeave="exit_MouseLeave" ToolTip="关闭"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0" />
+        </Grid>
+        <Grid Grid.Row="1" Margin="7,6,7,6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock  Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">检测单编号:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Name="_orderid"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">来源产地:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Name="_areaName"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">被检单位:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Name="_companyName"   VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center">检测项目:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" Name="_itemName"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">检测对象:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.Row="4" Name="_objectName"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center">检测方法:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.Row="5" Name="_reangetName"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">检测值:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Name="_detectvalue"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center">检测结果:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7" Name="_resultName"   VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right" VerticalAlignment="Center">检测单位:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="8" Name="_deptName"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right" VerticalAlignment="Center">检测时间:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="9" Name="_detectDate"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="10" HorizontalAlignment="Right" xml:space="preserve" VerticalAlignment="Center">检  测  师:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="10" Name="_detectUserName"    VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="0" Grid.Row="11" HorizontalAlignment="Right" VerticalAlignment="Center">数据来源:</TextBlock>
+            <TextBlock  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="11" Name="_detectTypeName"    VerticalAlignment="Center"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>
