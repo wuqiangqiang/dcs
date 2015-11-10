@@ -23,9 +23,9 @@
                       VerticalAlignment="Center"/>
                 
             </Border>-->
-            <Image Source="/res/file_1.png"></Image>
-            <!--<ControlTemplate.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
+            <Image Source="/res/file_1.png" x:Name="img_file"></Image>
+            <ControlTemplate.Triggers>
+                <!--<Trigger Property="IsMouseOver" Value="True">
                     <Setter TargetName="bd" Property="Background">
                         <Setter.Value>
                             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -34,16 +34,15 @@
                             </LinearGradientBrush>
                         </Setter.Value>
                     </Setter>
-                </Trigger>
+                </Trigger>-->
                 <Trigger Property="IsChecked" Value="True">
-                    <Setter TargetName="p" Property="Data"
-                                Value="M0,5 L8,5 L4,0 Z"/>
+                    <Setter TargetName="img_file" Property="Source" Value="/res/file_1_pressed.png"/>
                 </Trigger>
-                <Trigger Property="IsEnabled" Value="True">
+                <!--<Trigger Property="IsEnabled" Value="True">
                     <Setter TargetName="bd" Property="BorderBrush" Value="Gray"/>
                     <Setter TargetName="p" Property="Fill" Value="Gray"/>
-                </Trigger>
-            </ControlTemplate.Triggers>-->
+                </Trigger>-->
+            </ControlTemplate.Triggers>
         </ControlTemplate>
         <!-- Expnder的样式-->
         <Style TargetType="{x:Type Expander}">
@@ -70,7 +69,8 @@
                                 <ContentPresenter  HorizontalAlignment="Left" Margin="35,0,0,0" ContentSource="Header" VerticalAlignment="Center"/>
                                 <ToggleButton Grid.Column="0"  Margin="5,0,0,0"  Height="35" Width="210" Template="{StaticResource ToggleButtonTemp}"
                                                   IsChecked="{Binding Path=IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
-                                                  OverridesDefaultStyle="True"/>
+                                                  OverridesDefaultStyle="True">
+                                </ToggleButton>
                             </Grid>
                             <Image x:Name="img" Source="/res/line.png" Grid.Row="1"></Image>
                             <Border x:Name="scv" Background="#f2f1f1" BorderThickness="0" BorderBrush="Gray" Grid.Row="2" >
@@ -125,7 +125,7 @@
     </UserControl.Resources>
     <Grid  x:Name="_grid" HorizontalAlignment="Left" ScrollViewer.VerticalScrollBarVisibility="Auto" >
         <StackPanel>
-            <Expander ExpandDirection="Down" Width="210" x:Name="_expander_0">
+            <Expander ExpandDirection="Down" Width="210" x:Name="_expander_0" HorizontalAlignment="Left">
                 <Expander.Header>
                     <TextBlock x:Name="_text_0" FontFamily="微软雅黑" FontSize="12"/>
                 </Expander.Header>

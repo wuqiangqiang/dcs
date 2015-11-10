@@ -222,7 +222,7 @@ namespace FoodSafetyMonitoring
             grid_Menu.Background = Brushes.White;
 
             //让首页主菜单呈现选中状态
-            _grid_0.Background = new SolidColorBrush(Color.FromRgb(25, 49, 115));
+            //_grid_0.Background = new SolidColorBrush(Color.FromRgb(25, 49, 115));
             _image_0.Source = new BitmapImage(new Uri("pack://application:,," + "/res/firstpage_select.png"));
         }
 
@@ -483,16 +483,13 @@ namespace FoodSafetyMonitoring
                }
 
             }
-            //一旦鼠标点击在主菜单图标上，主菜单的背景色颜色加深
+            //一旦鼠标点击在主菜单图标上，主菜单的图片替换
             for (int i = 0; i < mainWindow.mainMenus.Count; i++)
             {
-                //if (mainWindow.mainMenus[i].Flag_Exits == 1)
-                //{
                 mainWindow.mainMenus[i].img.Source = mainWindow.mainMenus[i].img_mouseLeave;
-                mainWindow.mainMenus[i].grid.Background = new SolidColorBrush(Color.FromRgb(25, 86, 162));
-                //}
+                //mainWindow.mainMenus[i].grid.Background = new SolidColorBrush(Color.FromRgb(25, 86, 162));
             }
-            grid.Background = new SolidColorBrush(Color.FromRgb(25, 49, 115));
+            //grid.Background = new SolidColorBrush(Color.FromRgb(25, 49, 115));
             this.img.Source = img_mouseEnter;
         }
 

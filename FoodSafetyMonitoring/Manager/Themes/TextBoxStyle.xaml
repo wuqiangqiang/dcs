@@ -20,13 +20,13 @@
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                <ControlTemplate TargetType="{x:Type TextBoxBase}"> 
                     <Border 
             Name="Border"
             CornerRadius="0" 
             Padding="2"
             Background="Transparent"
-            BorderBrush="#699ed4"
+            BorderBrush="#69d4ba"
             BorderThickness="0" >
                         <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
                     </Border>

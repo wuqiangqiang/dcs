@@ -119,7 +119,7 @@
                   x:Name="DropDownBorder"
                   Background="{StaticResource WindowBackgroundBrush}"
                   BorderThickness="1"
-                  BorderBrush="#699ed4"/>
+                  BorderBrush="#69d4ba"/>
                                 <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
                                     <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
                                 </ScrollViewer>
@@ -172,7 +172,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="true">
-                            <Setter TargetName="Border" Property="Background" Value="#699ed4"/>
+                            <Setter TargetName="Border" Property="Background" Value="#69d4ba"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}"/>

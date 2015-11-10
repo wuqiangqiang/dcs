@@ -33,7 +33,7 @@
             CornerRadius="0" 
             Padding="2"
             Background="{StaticResource WindowBackgroundBrush}"
-            BorderBrush="#699ed4"
+            BorderBrush="#69d4ba"
             BorderThickness="1" >
                         <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
                     </Border>

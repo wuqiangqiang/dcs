@@ -5,7 +5,7 @@
     <Style x:Key="styleCalendar" TargetType="toolkit:Calendar" >
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
-        <Setter Property="BorderBrush" Value="#699ed4"/>
+        <Setter Property="BorderBrush" Value="#69d4ba"/>
         <Setter Property="BorderThickness" Value="0.8"/>
         <Setter Property="LayoutTransform">
             <Setter.Value>
@@ -17,7 +17,7 @@
     </Style>
     <Style TargetType="toolkit:DatePicker"  >
         <Setter Property="CalendarStyle"  Value="{StaticResource styleCalendar}"/>
-        <Setter Property="BorderBrush" Value="#699ed4"/>
+        <Setter Property="BorderBrush" Value="#69d4ba"/>
         <Setter Property="Width" Value="120"/>
         <Setter Property="Height" Value="26"/>
         <Setter Property="BorderThickness" Value="0.8"/>
