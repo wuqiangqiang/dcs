@@ -186,6 +186,7 @@ namespace FoodSafetyMonitoring.Manager
             if (i == 1)
             {
                 Toolkit.MessageBox.Show("添加成功！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                Common.SysLogEntry.WriteLog("生产加工环节检测单录入", (Application.Current.Resources["User"] as UserInfo).ShowName, OperationType.Add, "新增检测单");
                 clear();
                 ComboboxTool.InitComboboxSource(_source_company, "SELECT COMPANYID,COMPANYNAME FROM v_user_company WHERE userid =  " + userId, "lr");
             }

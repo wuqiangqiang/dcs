@@ -83,6 +83,7 @@ namespace FoodSafetyMonitoring.Manager
                 if (result > 0)
                 {
                     Toolkit.MessageBox.Show("来源产地设置成功！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Common.SysLogEntry.WriteLog("产地设置", (Application.Current.Resources["User"] as UserInfo).ShowName, OperationType.AddAndModify, "设置产地");
                     return;
                 }
                 else

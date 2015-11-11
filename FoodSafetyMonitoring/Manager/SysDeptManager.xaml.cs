@@ -346,7 +346,7 @@ namespace FoodSafetyMonitoring.Manager
                     if (count == 1)
                     {
                         Toolkit.MessageBox.Show("保存成功！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Common.SysLogEntry.WriteLog("部门管理", (System.Windows.Application.Current.Resources["User"] as UserInfo).ShowName, Common.OperationType.Modify, "新增部门信息");
+                        Common.SysLogEntry.WriteLog("部门管理", (System.Windows.Application.Current.Resources["User"] as UserInfo).ShowName, Common.OperationType.Add, "新增部门信息");
                     }
                     else
                     {
@@ -1159,7 +1159,7 @@ namespace FoodSafetyMonitoring.Manager
                         //    }
                         //}
                         Toolkit.MessageBox.Show("删除成功！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Common.SysLogEntry.WriteLog("部门管理", (System.Windows.Application.Current.Resources["User"] as UserInfo).ShowName, Common.OperationType.Modify, "删除部门信息");
+                        Common.SysLogEntry.WriteLog("部门管理", (System.Windows.Application.Current.Resources["User"] as UserInfo).ShowName, Common.OperationType.Delete, "删除部门信息");
                     }
                     else
                     {

@@ -32,6 +32,8 @@ namespace FoodSafetyMonitoring.Manager
         {
             InitializeComponent();
             cmbOperationType.SelectedIndex = 0;
+            dtpStartDate.SelectedDate = DateTime.Now;
+            dtpEndDate.SelectedDate = DateTime.Now;
         }
 
         private void BindData()

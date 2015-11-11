@@ -152,6 +152,7 @@ namespace FoodSafetyMonitoring.Manager
                     if (DeleteUser(id))
                     {
                         Toolkit.MessageBox.Show("删除成功！", "系统提示");
+                        Common.SysLogEntry.WriteLog("角色管理", (Application.Current.Resources["User"] as UserInfo).ShowName, OperationType.Delete, "删除用户角色");
                         BindData();
                         Clear();
                     }
@@ -258,6 +259,14 @@ namespace FoodSafetyMonitoring.Manager
                 if (num == 1)
                 {
                     Toolkit.MessageBox.Show("保存成功！", "系统提示", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+                    if (btnSave.Tag == null)
+                    {
+                        Common.SysLogEntry.WriteLog("角色管理", (Application.Current.Resources["User"] as UserInfo).ShowName, OperationType.Add, "添加用户角色");
+                    }
+                    else
+                    {
+                        Common.SysLogEntry.WriteLog("角色管理", (Application.Current.Resources["User"] as UserInfo).ShowName, OperationType.Modify, "修改用户角色");
+                    }
                     Clear();
                     BindData();
                 }

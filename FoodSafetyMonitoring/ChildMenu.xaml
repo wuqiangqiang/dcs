@@ -113,7 +113,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#1956a2"/>
+                                <Setter TargetName="Border" Property="Background" Value="#1ba794"/>
                                 <Setter TargetName="lab" Property="Foreground" Value="White"/>
                                 <Setter TargetName="img" Property="Source" Value="/res/file_2_pressed.png"/>
                             </Trigger>

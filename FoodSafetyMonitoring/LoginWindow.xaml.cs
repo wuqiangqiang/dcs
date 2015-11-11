@@ -286,7 +286,7 @@ namespace FoodSafetyMonitoring
                             {
                                 MainWindow mainWindow = new MainWindow(dbOperation);
                                 mainWindow.Show();
-                                Common.SysLogEntry.WriteLog("", this.cmbName.Text, Common.OperationType.Login, "登录系统");
+                                Common.SysLogEntry.WriteLog("登录", (Application.Current.Resources["User"] as UserInfo).ShowName, Common.OperationType.Login, "登录系统");
                                 this.Close();
                             }
                         }
@@ -294,7 +294,7 @@ namespace FoodSafetyMonitoring
                         {
                             MainWindow mainWindow = new MainWindow(dbOperation);
                             mainWindow.Show();
-                            Common.SysLogEntry.WriteLog("", this.cmbName.Text, Common.OperationType.Login, "登录系统");
+                            Common.SysLogEntry.WriteLog("登录", (Application.Current.Resources["User"] as UserInfo).ShowName, Common.OperationType.Login, "登录系统");
                             this.Close();
                         }
 

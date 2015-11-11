@@ -94,6 +94,7 @@ namespace FoodSafetyMonitoring.Manager
             if (count == 1)
             {
                 Toolkit.MessageBox.Show("图片上传成功！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                Common.SysLogEntry.WriteLog("自定义设置", (Application.Current.Resources["User"] as UserInfo).ShowName, OperationType.Modify, "上传图片");
             }
             else
             {
@@ -115,6 +116,7 @@ namespace FoodSafetyMonitoring.Manager
             if (count == 1)
             {
                 Toolkit.MessageBox.Show("标题设置成功！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                Common.SysLogEntry.WriteLog("自定义设置", (Application.Current.Resources["User"] as UserInfo).ShowName, OperationType.Modify, "设置标题");
                 return;
             }
         }

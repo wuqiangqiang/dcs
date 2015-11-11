@@ -17,7 +17,7 @@
           x:Name="Border"  
           CornerRadius="0" 
           BorderThickness="0"
-          Background="#2367b2"
+          Background="#1ba794"
           BorderBrush="{StaticResource NormalBorderBrush}">
                         <ContentPresenter 
             Margin="2"
@@ -30,7 +30,7 @@
                             <Setter TargetName="Border" Property="Background" Value="#0e4e96"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="false">
-                            <Setter TargetName="Border" Property="Background" Value="#2367b2"/>
+                            <Setter TargetName="Border" Property="Background" Value="#1ba794"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
