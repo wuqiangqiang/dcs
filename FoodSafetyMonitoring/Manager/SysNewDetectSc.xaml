@@ -53,15 +53,17 @@
                 </Grid>
                 <Grid Grid.Row="3">
                     <StackPanel >
-                        <TextBlock  Width="70">检测方法:</TextBlock>
-                        <CheckBox x:Name="_detect_method1" Checked="_detect_method1_Checked" >金标检测卡</CheckBox>
-                        <CheckBox x:Name="_detect_method2" Checked="_detect_method1_Checked" >ELISA试剂盒</CheckBox>
-                        <CheckBox x:Name="_detect_method3" Checked="_detect_method1_Checked" >分析检测</CheckBox>
-                        <TextBlock Width="70" Margin="60,0,0,0">检测项目:</TextBlock>
+                        <TextBlock Width="70">检测项目:</TextBlock>
                         <!--<ComboBox  Width="100" x:Name="_detect_trade" IsEnabled="False"></ComboBox>-->
-                        <ComboBox  Width="125" x:Name="_detect_item"  Margin="5,0,0,0"></ComboBox>
+                        <ComboBox  Width="100" x:Name="_detect_item"  Margin="0,0,0,0"></ComboBox>
+                        <TextBlock  Width="60">检测方法:</TextBlock>
+                        <!--<CheckBox x:Name="_detect_method1" Checked="_detect_method1_Checked" >酶抑制法</CheckBox>
+                        <CheckBox x:Name="_detect_method2" Checked="_detect_method1_Checked" >ELISA试剂盒</CheckBox>
+                        <CheckBox x:Name="_detect_method3" Checked="_detect_method1_Checked" >分析检测</CheckBox>-->
+                        <ComboBox  Width="230" x:Name="_detect_method"  Margin="0,0,0,0"></ComboBox>
+                        
                         <TextBlock Width="60" >检测对象:</TextBlock>
-                        <ComboBox  Width="85" x:Name="_detect_object"></ComboBox>
+                        <ComboBox  Width="210" x:Name="_detect_object" Margin="0"></ComboBox>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="4">
@@ -75,7 +77,7 @@
                         <TextBlock  Width="70">检测值:</TextBlock>
                         <TextBox  x:Name="_detect_value" Margin="0,0,0,0" MaxLength="10" Width="100" InputMethod.IsInputMethodEnabled="False" DataObject.Pasting="Detect_Value_Pasting" PreviewKeyDown="Detect_Value_PreviewKeyDown"  PreviewTextInput="Detect_Value_PreviewTextInput"></TextBox>
                         <TextBlock Width="60">检测结果:</TextBlock>
-                        <ComboBox  Width="85" x:Name="_detect_result"></ComboBox>
+                        <ComboBox  Width="230" x:Name="_detect_result"></ComboBox>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="5">

@@ -70,6 +70,8 @@ namespace FoodSafetyMonitoring.Manager
 
             ComboboxTool.InitComboboxSource(_source_company, "SELECT COMPANYID,COMPANYNAME FROM v_user_company WHERE userid =  " + userId, "lr");
             ComboboxTool.InitComboboxSource(_detect_item, string.Format("SELECT ItemID,ItemNAME FROM t_det_item WHERE OPENFLAG = '1'"), "lr");
+            _detect_item.SelectionChanged += new SelectionChangedEventHandler(_detect_item_SelectionChanged);
+            ComboboxTool.InitComboboxSource(_detect_method, string.Format("SELECT reagentId,reagentName FROM t_det_reagent WHERE OPENFLAG = '1'"), "lr");
             ComboboxTool.InitComboboxSource(_detect_object, string.Format("SELECT objectId,objectName FROM t_det_object WHERE OPENFLAG = '1'"), "lr");
             ComboboxTool.InitComboboxSource(_detect_result, "SELECT resultId,resultName FROM t_det_result where openFlag = '1' ORDER BY id", "lr");
             _entering_datetime.Text = string.Format("{0:g}", System.DateTime.Now);
@@ -82,9 +84,10 @@ namespace FoodSafetyMonitoring.Manager
         private void clear()
         {
             this._detect_item.SelectedIndex = 0;
-            this._detect_method1.IsChecked = false;
-            this._detect_method2.IsChecked = false;
-            this._detect_method3.IsChecked = false;
+            //this._detect_method1.IsChecked = false;
+            //this._detect_method2.IsChecked = false;
+            //this._detect_method3.IsChecked = false;
+            this._detect_method.SelectedIndex = 0;
             this._detect_object.SelectedIndex = 0;
             this._detect_value.Text = "";
             this._detect_result.SelectedIndex = 0;
@@ -118,7 +121,8 @@ namespace FoodSafetyMonitoring.Manager
                 Toolkit.MessageBox.Show("请选择检查项目！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-            if (_detect_method1.IsChecked != true && _detect_method2.IsChecked != true && _detect_method3.IsChecked != true)
+            //if (_detect_method1.IsChecked != true && _detect_method2.IsChecked != true && _detect_method3.IsChecked != true)
+            if (_detect_method.SelectedIndex < 1)
             {
                 Toolkit.MessageBox.Show("请选择检测方法！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
@@ -170,12 +174,24 @@ namespace FoodSafetyMonitoring.Manager
                 company_id = dbOperation.GetSingle(string.Format("SELECT COMPANYID from t_company where COMPANYNAME ='{0}' and deptid = '{1}'", _source_company.Text, (Application.Current.Resources["User"] as UserInfo).DepartmentID)).ToString();
             }
 
-            string sql = string.Format("call p_insert_detect_sc('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')"
+            //判断检测模式：若为农药残留检测，模式为0；否则模式为1
+            string detect_mode = "";
+            if((_detect_item.SelectedItem as Label).Tag.ToString() == "1")
+            {
+                detect_mode = "0";
+            }
+            else
+            {
+                detect_mode = "1";
+            }
+
+            string sql = string.Format("call p_insert_detect_sc('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')"
                             , company_id,
                             (_detect_item.SelectedItem as Label).Tag.ToString(),
-                            (_detect_method1.IsChecked == true ? 1 : 0) + (_detect_method2.IsChecked == true ? 2 : 0) + (_detect_method3.IsChecked == true ? 3 : 0),
+                            (_detect_method.SelectedItem as Label).Tag.ToString(),
+                            //(_detect_method1.IsChecked == true ? 1 : 0) + (_detect_method2.IsChecked == true ? 2 : 0) + (_detect_method3.IsChecked == true ? 3 : 0),
                             (_detect_object.SelectedItem as Label).Tag.ToString(),
-                            _detect_value.Text,
+                            _detect_value.Text, detect_mode,
                             (_detect_result.SelectedItem as Label).Tag.ToString(),
                             (Application.Current.Resources["User"] as UserInfo).DepartmentID,
                             (Application.Current.Resources["User"] as UserInfo).ID,
@@ -204,33 +220,34 @@ namespace FoodSafetyMonitoring.Manager
             this._region.SelectedIndex = 0;
             this._source_company.SelectedIndex = 0;
             this._detect_item.SelectedIndex = 0;
-            this._detect_method1.IsChecked = false;
-            this._detect_method2.IsChecked = false;
-            this._detect_method3.IsChecked = false;
+            this._detect_method.SelectedIndex = 0;
+            //this._detect_method1.IsChecked = false;
+            //this._detect_method2.IsChecked = false;
+            //this._detect_method3.IsChecked = false;
             this._detect_object.SelectedIndex = 0;
             this._detect_value.Text = "";
             this._detect_result.SelectedIndex = 0;
             this._entering_datetime.Text = string.Format("{0:g}", System.DateTime.Now);
         }
 
-        private void _detect_method1_Checked(object sender, RoutedEventArgs e)
-        {
-            if ((sender as CheckBox).Name == "_detect_method1")
-            {
-                _detect_method2.IsChecked = false;
-                _detect_method3.IsChecked = false;
-            }
-            else if ((sender as CheckBox).Name == "_detect_method2")
-            {
-                _detect_method1.IsChecked = false;
-                _detect_method3.IsChecked = false;
-            }
-            else if ((sender as CheckBox).Name == "_detect_method3")
-            {
-                _detect_method1.IsChecked = false;
-                _detect_method2.IsChecked = false;
-            }
-        }
+        //private void _detect_method1_Checked(object sender, RoutedEventArgs e)
+        //{
+        //    if ((sender as CheckBox).Name == "_detect_method1")
+        //    {
+        //        _detect_method2.IsChecked = false;
+        //        _detect_method3.IsChecked = false;
+        //    }
+        //    else if ((sender as CheckBox).Name == "_detect_method2")
+        //    {
+        //        _detect_method1.IsChecked = false;
+        //        _detect_method3.IsChecked = false;
+        //    }
+        //    else if ((sender as CheckBox).Name == "_detect_method3")
+        //    {
+        //        _detect_method1.IsChecked = false;
+        //        _detect_method2.IsChecked = false;
+        //    }
+        //}
 
 
         void _source_company_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -275,6 +292,22 @@ namespace FoodSafetyMonitoring.Manager
                     _province.SelectedIndex = 0;
                     _city.SelectedIndex = 0;
                     _region.SelectedIndex = 0;
+                }
+            }
+        }
+
+        void _detect_item_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_detect_item.SelectedIndex > 0)
+            {
+                //如果检测项目是农药残留，则检测方法为酶抑制法
+                if((_detect_item.SelectedItem as Label).Tag.ToString() == "1")
+                {
+                    ComboboxTool.InitComboboxSource(_detect_method, string.Format("SELECT reagentId,reagentName FROM t_det_reagent WHERE OPENFLAG = '1' and (detectmode = '0' or ifnull(detectmode,'') = '')"), "lr");
+                }
+                else
+                {
+                    ComboboxTool.InitComboboxSource(_detect_method, string.Format("SELECT reagentId,reagentName FROM t_det_reagent WHERE OPENFLAG = '1' and (detectmode = '1' or ifnull(detectmode,'') = '')"), "lr");
                 }
             }
         }

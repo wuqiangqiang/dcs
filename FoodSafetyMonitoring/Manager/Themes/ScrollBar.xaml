@@ -121,6 +121,7 @@
                         </Grid.RowDefinitions>
                         <!--<Border Grid.RowSpan="3">
                             <Border.Background>
+                        
                                 <ImageBrush ImageSource="/images/scroll_background.png" />
                             </Border.Background>
                         </Border>-->

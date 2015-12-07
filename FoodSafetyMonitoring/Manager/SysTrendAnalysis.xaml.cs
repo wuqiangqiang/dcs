@@ -26,6 +26,8 @@ namespace FoodSafetyMonitoring.Manager
     {
         IDBOperation dbOperation;
         private string dept_type;
+        private DataTable currenttable;
+        //private double _data_size, _graph_size;
         public SysTrendAnalysis(IDBOperation dbOperation, string depttype)
         {
             InitializeComponent();
@@ -61,7 +63,11 @@ namespace FoodSafetyMonitoring.Manager
 
         void _chart_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-
+            if (currenttable != null)
+            {
+                setChart(currenttable);
+            }
+            
         }
 
 
@@ -166,6 +172,8 @@ namespace FoodSafetyMonitoring.Manager
                 row_count = 0;
             }
 
+            currenttable = table;
+
             _title.Text = _analysis_theme.Text;
             _title_2.Text = _analysis_theme.Text;
             _tableview.SetDataTable(table, "", new List<int>());
@@ -180,7 +188,14 @@ namespace FoodSafetyMonitoring.Manager
                 return;
             }
 
-            _chart.Children.Clear(); 
+            //赋值曲线图
+            setChart(table);
+            
+        }
+
+        public void setChart(DataTable table)
+        {
+            _chart.Children.Clear();
             chart = new Chart();
             chart.Background = Brushes.Transparent;
             chart.View3D = true;
@@ -208,12 +223,27 @@ namespace FoodSafetyMonitoring.Manager
                 }
                 chart.Series.Add(dataSeries);
             }
-          _chart.Children.Add(chart);
+            _chart.Children.Add(chart);
         }
 
         private void _export_Click(object sender, RoutedEventArgs e)
         {
             _tableview.ExportExcel();
         }
+
+        //private void _data_btn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if((sender as Button).Tag.ToString() == "normal")
+        //    {
+        //        _data_size = _data.ActualHeight;
+        //        _data.Height = new GridLength(40, GridUnitType.Pixel);
+        //        _data_btn.Tag = "small";
+        //    }
+        //    else
+        //    {
+        //        _data.Height = new GridLength(_data_size, GridUnitType.Pixel);
+        //        _data_btn.Tag = "normal";
+        //    }
+        //}
     }
 }

@@ -6,7 +6,7 @@
     </ResourceDictionary.MergedDictionaries>
     
     <!--保存按钮-->
-    <Style  TargetType="Button">
+    <Style TargetType="{x:Type Button}">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="FontFamily" Value="微软雅黑"/>
         <Setter Property="FontSize" Value="14"/>
@@ -20,17 +20,14 @@
           Background="#1ba794"
           BorderBrush="{StaticResource NormalBorderBrush}">
                         <ContentPresenter 
-            Margin="2"
+            Margin="2"                 
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             RecognizesAccessKey="True"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="#193173"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="false">
-                            <Setter TargetName="Border" Property="Background" Value="#1ba794"/>
+                            <Setter TargetName="Border" Property="Background" Value="#0d917f"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -149,7 +149,7 @@ namespace FoodSafetyMonitoring.Manager
         {
             if (dtpStartDate.SelectedDate.Value.Date > dtpEndDate.SelectedDate.Value.Date)
             {
-                Toolkit.MessageBox.Show("开始日期大于结束日期，请重新选择！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                Toolkit.MessageBox.Show("开始日期大于结束日期，请重新选择！", "系统提示", MessageBoxButton.OK);
                 return;
             }
             _tableview.GetDataByPageNumberEvent += new UcTableOperableView_NoTitle.GetDataByPageNumberEventHandler(_tableview_GetDataByPageNumberEvent);
@@ -162,7 +162,7 @@ namespace FoodSafetyMonitoring.Manager
 
             if (_tableview.RowTotal == 0)
             {
-                Toolkit.MessageBox.Show("没有查询到数据！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                Toolkit.MessageBox.Show("没有查询到数据！", "系统提示", MessageBoxButton.OK);
                 return;
             }
         }
@@ -216,7 +216,7 @@ namespace FoodSafetyMonitoring.Manager
                         int result1 = dbOperation.GetDbHelper().ExecuteSql(string.Format("delete from t_detect_review where DetectId ='{0}'", id));
                         if (result1 <= 0)
                         {
-                            Toolkit.MessageBox.Show("删除失败！", "系统提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Toolkit.MessageBox.Show("删除失败！", "系统提示", MessageBoxButton.OK);
                             return;
                         }
                     }

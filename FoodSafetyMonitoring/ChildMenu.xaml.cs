@@ -139,6 +139,7 @@ namespace FoodSafetyMonitoring
                     //生产加工->新建检测单
                     case "20101": temptb.Header = (sender as Button).Content.ToString();
                         temptb.Content = new SysNewDetectSc();
+                        //temptb.Content = new UserControl1();
                         flag = 1;
                         break;
                     //生产加工->检测单查询

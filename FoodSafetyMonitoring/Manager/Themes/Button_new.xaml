@@ -27,7 +27,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="#0e4e96"/>
+                            <Setter TargetName="Border" Property="Background" Value="#097e6e"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="false">
                             <Setter TargetName="Border" Property="Background" Value="#1ba794"/>

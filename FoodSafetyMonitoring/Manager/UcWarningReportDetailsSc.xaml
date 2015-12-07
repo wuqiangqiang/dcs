@@ -18,7 +18,7 @@
             <StackPanel>
                 <Button Name="btnBack" Width="60" Height="25"  Click="btnBack_Click" HorizontalAlignment="Left" Margin="5,0,0,0">&lt;&lt;返回</Button>
                 <TextBlock x:Name="_hj" Margin="20,0,0,0" VerticalAlignment="Center" Visibility="Hidden">合计</TextBlock>
-                <TextBlock x:Name="_title" Margin="10,0,10,0" VerticalAlignment="Center" MinWidth="10" Foreground="#1956a2" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="_title" Margin="10,0,10,0" VerticalAlignment="Center" MinWidth="10" Foreground="#1ba794" FontWeight="Bold"></TextBlock>
                 <TextBlock x:Name="_sj" Margin="0,0,0,0" VerticalAlignment="Center" Visibility="Hidden">条数据</TextBlock>
             </StackPanel>
         </Grid>

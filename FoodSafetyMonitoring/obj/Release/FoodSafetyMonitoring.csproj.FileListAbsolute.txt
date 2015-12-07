@@ -1965,3 +1965,8 @@ D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\Manager\UcSampling
 D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\Manager\UcTaskReportDetailsSc.baml
 D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\Manager\UcWarningReportDetailsSc.g.cs
 D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\Manager\UcWarningReportDetailsSc.baml
+D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\Manager\Themes\CalendarStyle.baml
+D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\Manager\UserControl1.baml
+D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\Manager\UserControl1.g.cs
+D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\CMessageBoxWindow.baml
+D:\农残仪平台版本\dcs\FoodSafetyMonitoring\obj\Release\CMessageBoxWindow.g.cs

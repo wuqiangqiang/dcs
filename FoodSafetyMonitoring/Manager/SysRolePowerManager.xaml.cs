@@ -102,6 +102,8 @@ namespace FoodSafetyMonitoring.Manager
                 {
                     TreeItem tiTmp = new TreeItem();
                     tiTmp.tag = dt.Rows[i]["SUB_ID"].ToString();
+
+
                     tiTmp.text = dt.Rows[i]["SUB_NAME"].ToString();
                     tiTmp.parent = ti;
                     LoadTree(dt,tiTmp);
