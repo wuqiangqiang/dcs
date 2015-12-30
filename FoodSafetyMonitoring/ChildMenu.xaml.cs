@@ -126,6 +126,7 @@ namespace FoodSafetyMonitoring
             }
             if (flag_exits == 0)
             {
+                mainWindow.grid_Component.Visibility = Visibility.Visible;
                 int flag = 0;
                 temptb = new TabItem();
                 temptb.Tag = (sender as Button).Tag.ToString();
@@ -139,7 +140,6 @@ namespace FoodSafetyMonitoring
                     //生产加工->新建检测单
                     case "20101": temptb.Header = (sender as Button).Content.ToString();
                         temptb.Content = new SysNewDetectSc();
-                        //temptb.Content = new UserControl1();
                         flag = 1;
                         break;
                     //生产加工->检测单查询
@@ -187,6 +187,160 @@ namespace FoodSafetyMonitoring
                         temptb.Content = new UcSetTask(mainWindow.dbOperation, "0");
                         flag = 1;
                         break;
+
+                    //商贸流通->新建检测单
+                    case "30101": temptb.Header = (sender as Button).Content.ToString();
+                        temptb.Content = new SysNewDetectLt();
+                        flag = 1;
+                        break;
+                    //商贸流通->检测单查询
+                    case "30102": temptb.Header = (sender as Button).Content.ToString();
+                        temptb.Content = new SysNewDetectLtQuery(mainWindow.dbOperation);
+                        flag = 1;
+                        break;
+                    //商贸流通->检测数据统计->日报表
+                    case "30201": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysDayReport(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //商贸流通->检测数据统计->月报表
+                    case "30202": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysMonthReport(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //商贸流通->检测数据统计->自定义报表
+                    case "30203": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysYearReport(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //商贸流通->数据分析->对比分析
+                    case "30301": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysComparisonAndAnalysis(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //商贸流通->数据分析->趋势分析
+                    case "30302": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysTrendAnalysis(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //商贸流通->数据分析->区域分析
+                    case "30303": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysAreaAnalysis(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //商贸流通->数据分析->任务完成率分析
+                    case "30304": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysTaskReport(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //商贸流通->检测任务->设置任务量
+                    case "30401": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new UcSetTask(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+
+                    //餐饮酒店->新建检测单
+                    case "40101": temptb.Header = (sender as Button).Content.ToString();
+                        temptb.Content = new SysNewDetectCy();
+                        flag = 1;
+                        break;
+                    //餐饮酒店->检测单查询
+                    case "40102": temptb.Header = (sender as Button).Content.ToString();
+                        temptb.Content = new SysNewDetectCyQuery(mainWindow.dbOperation);
+                        flag = 1;
+                        break;
+                    //餐饮酒店->检测数据统计->日报表
+                    case "40201": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysDayReport(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //餐饮酒店->检测数据统计->月报表
+                    case "40202": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysMonthReport(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //餐饮酒店->检测数据统计->自定义报表
+                    case "40203": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysYearReport(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //餐饮酒店->数据分析->对比分析
+                    case "40301": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysComparisonAndAnalysis(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //餐饮酒店->数据分析->趋势分析
+                    case "40302": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysTrendAnalysis(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //餐饮酒店->数据分析->区域分析
+                    case "40303": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysAreaAnalysis(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //餐饮酒店->数据分析->任务完成率分析
+                    case "40304": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysTaskReport(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //餐饮酒店->检测任务->设置任务量
+                    case "40401": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new UcSetTask(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+
+                    //学校食堂->新建检测单
+                    case "50101": temptb.Header = (sender as Button).Content.ToString();
+                        temptb.Content = new SysNewDetectSchool();
+                        flag = 1;
+                        break;
+                    //学校食堂->检测单查询
+                    case "50102": temptb.Header = (sender as Button).Content.ToString();
+                        temptb.Content = new SysNewDetectSchoolQuery(mainWindow.dbOperation);
+                        flag = 1;
+                        break;
+                    //学校食堂->检测数据统计->日报表
+                    case "50201": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysDayReport(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //学校食堂->检测数据统计->月报表
+                    case "50202": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysMonthReport(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //学校食堂->检测数据统计->自定义报表
+                    case "50203": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysYearReport(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //学校食堂->数据分析->对比分析
+                    case "50301": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysComparisonAndAnalysis(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //学校食堂->数据分析->趋势分析
+                    case "50302": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysTrendAnalysis(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //学校食堂->数据分析->区域分析
+                    case "50303": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysAreaAnalysis(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //学校食堂->数据分析->任务完成率分析
+                    case "50304": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysTaskReport(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //学校食堂->检测任务->设置任务量
+                    case "50401": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new UcSetTask(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+
                     //风险预警->生产加工->实时风险
                     case "80101": temptb.Header = (sender as Button).Content.ToString() + "(生产加工)";
                         temptb.Content = new SysWarningInfo(mainWindow.dbOperation, "0");
@@ -202,11 +356,61 @@ namespace FoodSafetyMonitoring
                         temptb.Content = new SysReviewLog(mainWindow.dbOperation, "0");
                         flag = 1;
                         break;
+
+                    //风险预警->商贸流通->实时风险
+                    case "80201": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysWarningInfo(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+                    //风险预警->商贸流通->预警复核
+                    case "80202": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysReviewInfoLt(mainWindow.dbOperation);
+                        flag = 1;
+                        break;
+                    //风险预警->商贸流通->复核日志
+                    case "80203": temptb.Header = (sender as Button).Content.ToString() + "(商贸流通)";
+                        temptb.Content = new SysReviewLog(mainWindow.dbOperation, "1");
+                        flag = 1;
+                        break;
+
+                    //风险预警->餐饮酒店->实时风险
+                    case "80301": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysWarningInfo(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+                    //风险预警->餐饮酒店->预警复核
+                    case "80302": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysReviewInfoCy(mainWindow.dbOperation);
+                        flag = 1;
+                        break;
+                    //风险预警->餐饮酒店->复核日志
+                    case "80303": temptb.Header = (sender as Button).Content.ToString() + "(餐饮酒店)";
+                        temptb.Content = new SysReviewLog(mainWindow.dbOperation, "2");
+                        flag = 1;
+                        break;
+
+                    //风险预警->学校食堂->实时风险
+                    case "80401": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysWarningInfo(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+                    //风险预警->学校食堂->预警复核
+                    case "80402": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysReviewInfoSchool(mainWindow.dbOperation);
+                        flag = 1;
+                        break;
+                    //风险预警->学校食堂->复核日志
+                    case "80403": temptb.Header = (sender as Button).Content.ToString() + "(学校食堂)";
+                        temptb.Content = new SysReviewLog(mainWindow.dbOperation, "3");
+                        flag = 1;
+                        break;
+
                     //风险预警->预警数据统计
                     case "80501": temptb.Header = (sender as Button).Content.ToString();
                         temptb.Content = new SysWarningReport(mainWindow.dbOperation); 
                         flag = 1;
                         break;
+
                     //系统管理->系统管理->部门管理
                     case "90101": temptb.Header = (sender as Button).Content.ToString();
                         temptb.Content = new SysDeptManager(mainWindow.dbOperation);

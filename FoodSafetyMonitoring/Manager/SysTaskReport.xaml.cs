@@ -48,7 +48,14 @@ namespace FoodSafetyMonitoring.Manager
             user_flag_tier = (Application.Current.Resources["User"] as UserInfo).FlagTier;
 
             _year.ItemsSource = year;
-            _year.SelectedIndex = 1;
+            for (int i = 0; i < _year.Items.Count; i++)
+            {
+                if (_year.Items[i].ToString() == DateTime.Now.Year.ToString())
+                {
+                    _year.SelectedItem = _year.Items[i];
+                    break;
+                }
+            }
 
             ////检测单位
             //switch (user_flag_tier)
@@ -245,9 +252,12 @@ namespace FoodSafetyMonitoring.Manager
                 {
                     case "0": grid_info.Children.Add(new UcTaskReportDetailsSc(dbOperation, _year.Text, dept_id, item_id));
                         break;
-                    case "1":
-                    case "2":
-                    case "3":
+                    case "1": grid_info.Children.Add(new UcTaskReportDetailsLt(dbOperation, _year.Text, dept_id, item_id));
+                        break;
+                    case "2": grid_info.Children.Add(new UcTaskReportDetailsCy(dbOperation, _year.Text, dept_id, item_id));
+                        break;
+                    case "3": grid_info.Children.Add(new UcTaskReportDetailsSchool(dbOperation, _year.Text, dept_id, item_id));
+                        break;
                     default: break;
                 }
             }

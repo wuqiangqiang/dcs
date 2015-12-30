@@ -16,7 +16,6 @@ using System.Data;
 using FoodSafetyMonitoring.Common;
 using Toolkit = Microsoft.Windows.Controls;
 using DBUtility;
-
 using FoodSafetyMonitoring.Manager.UserControls;
 
 namespace FoodSafetyMonitoring.Manager

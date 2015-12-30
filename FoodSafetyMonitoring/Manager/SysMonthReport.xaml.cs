@@ -67,10 +67,24 @@ namespace FoodSafetyMonitoring.Manager
             user_flag_tier = (Application.Current.Resources["User"] as UserInfo).FlagTier;
 
             _year.ItemsSource = year;
-            _year.SelectedIndex = 5;
+            for (int i = 0; i < _year.Items.Count; i++)
+            {
+                if (_year.Items[i].ToString() == DateTime.Now.Year.ToString())
+                {
+                    _year.SelectedItem = _year.Items[i];
+                    break;
+                }
+            }
 
             _month.ItemsSource = month;
-            _month.SelectedIndex = 9;
+            for (int i = 0; i < _month.Items.Count; i++)
+            {
+                if (_month.Items[i].ToString() == DateTime.Now.Month.ToString())
+                {
+                    _month.SelectedItem = _month.Items[i];
+                    break;
+                }
+            }
 
             ////检测单位
             //switch (user_flag_tier)
@@ -297,9 +311,12 @@ namespace FoodSafetyMonitoring.Manager
                 {
                     case "0": grid_info.Children.Add(new UcMonthReportDetailsSc(dbOperation, _year.Text + "-" + _month.Text, dept_id, item_id, result_id));
                         break;
-                    case "1":
-                    case "2":
-                    case "3":
+                    case "1": grid_info.Children.Add(new UcMonthReportDetailsLt(dbOperation, _year.Text + "-" + _month.Text, dept_id, item_id, result_id));
+                        break;
+                    case "2": grid_info.Children.Add(new UcMonthReportDetailsCy(dbOperation, _year.Text + "-" + _month.Text, dept_id, item_id, result_id));
+                        break;
+                    case "3": grid_info.Children.Add(new UcMonthReportDetailsSchool(dbOperation, _year.Text + "-" + _month.Text, dept_id, item_id, result_id));
+                        break;
                     default: break;
                 }
             }

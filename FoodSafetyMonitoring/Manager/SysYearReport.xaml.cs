@@ -279,9 +279,15 @@ namespace FoodSafetyMonitoring.Manager
                     case "0": grid_info.Children.Add(new UcYearReportDetailsSc(dbOperation, ((DateTime)dtpStartDate.SelectedDate).ToShortDateString(),
                               ((DateTime)dtpEndDate.SelectedDate).ToShortDateString(), dept_id, item_id, result_id, object_id));
                         break;
-                    case "1":
-                    case "2":
-                    case "3":
+                    case "1": grid_info.Children.Add(new UcYearReportDetailsLt(dbOperation, ((DateTime)dtpStartDate.SelectedDate).ToShortDateString(),
+                               ((DateTime)dtpEndDate.SelectedDate).ToShortDateString(), dept_id, item_id, result_id, object_id));
+                        break;
+                    case "2": grid_info.Children.Add(new UcYearReportDetailsCy(dbOperation, ((DateTime)dtpStartDate.SelectedDate).ToShortDateString(),
+                               ((DateTime)dtpEndDate.SelectedDate).ToShortDateString(), dept_id, item_id, result_id, object_id));
+                        break;
+                    case "3": grid_info.Children.Add(new UcYearReportDetailsSchool(dbOperation, ((DateTime)dtpStartDate.SelectedDate).ToShortDateString(),
+                               ((DateTime)dtpEndDate.SelectedDate).ToShortDateString(), dept_id, item_id, result_id, object_id));
+                        break;
                     default: break;
                 }
             }

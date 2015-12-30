@@ -26,3 +26,4 @@ D:\农残仪平台版本\dcs\DBUtility\bin\Release\DBUtility.pdb
 D:\农残仪平台版本\dcs\DBUtility\bin\Release\MySql.Data.dll
 D:\农残仪平台版本\dcs\DBUtility\obj\Release\DBUtility.dll
 D:\农残仪平台版本\dcs\DBUtility\obj\Release\DBUtility.pdb
+D:\农残仪平台版本\dcs\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache

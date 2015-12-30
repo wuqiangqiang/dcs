@@ -15,12 +15,12 @@
             <ImageBrush ImageSource="../res/details_big.png"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="42"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Margin="7,7,7,0">
-            <Thumb Width="680" Height="40" Background="Transparent" Opacity="0" DragDelta="Thumb_DragDelta" HorizontalAlignment="Left"></Thumb>
-            <TextBlock Height="20" Width="160" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Center" Foreground="White">屠宰检测信息详情</TextBlock>
+            <Thumb Width="680" Height="35" Background="Transparent" Opacity="0" DragDelta="Thumb_DragDelta" HorizontalAlignment="Left"></Thumb>
+            <TextBlock Height="20" Width="160" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Center" Foreground="White">生产加工环节检测信息详情</TextBlock>
             <Image  Width="29" Height="26" Source="/res/close.png" x:Name="exit" MouseDown="exit_MouseDown" MouseEnter="exit_MouseEnter" MouseLeave="exit_MouseLeave" ToolTip="关闭"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,1,1,0"/>
         </Grid>
         <Grid Grid.Row="1" Margin="7,6,7,6">

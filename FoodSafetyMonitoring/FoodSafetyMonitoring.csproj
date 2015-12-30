@@ -169,17 +169,53 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Manager\AddReviewDetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\AddReviewDetailsLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\AddReviewDetailsSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\detectdetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Manager\detectdetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\detectdetailsLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\detectDetailsReview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Manager\detectDetailsReviewCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\detectDetailsReviewLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\detectDetailsReviewSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\detectdetailsSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Manager\Exporting_window.xaml">
       <SubType>Designer</SubType>
@@ -259,6 +295,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Manager\SysNewDetectCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\SysNewDetectCyQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\SysNewDetectLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\SysNewDetectLtQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\SysNewDetectSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\SysNewDetectSchoolQuery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\SysPersonManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -269,11 +329,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Manager\SysReviewInfoCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\SysReviewInfoLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\SysReviewInfoSc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Manager\SysReviewInfoSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Manager\SysReviewLog.xaml">
       <SubType>Designer</SubType>
@@ -531,6 +603,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Manager\UcDayReportDetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcDayReportDetailsLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\UcDayReportDetailsSc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -549,6 +629,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Manager\UcDayReportDetailsSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\UcMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -559,11 +643,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Manager\UcMonthReportDetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcMonthReportDetailsLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\UcMonthReportDetailsSc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Manager\UcMonthReportDetailsSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Manager\UcReviewdetails.xaml">
       <SubType>Designer</SubType>
@@ -597,7 +693,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Manager\UcTaskReportDetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcTaskReportDetailsLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\UcTaskReportDetailsSc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcTaskReportDetailsSchool.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -629,13 +737,33 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Manager\UcWarningdetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcWarningdetailsLt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\UcWarningdetailsSc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Manager\UcWarningdetailsSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\UcWarningReportCountry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcWarningReportDetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcWarningReportDetailsLt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -645,7 +773,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Manager\UcWarningReportDetailsSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Manager\UcYearReportCountry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcYearReportDetailsCy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\UcYearReportDetailsLt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -655,7 +795,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Manager\UserControl1.xaml">
+    <Page Include="Manager\UcYearReportDetailsSchool.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -783,12 +923,39 @@
     <Compile Include="Manager\AddReviewDetails.xaml.cs">
       <DependentUpon>AddReviewDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\AddReviewDetailsCy.xaml.cs">
+      <DependentUpon>AddReviewDetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\AddReviewDetailsLt.xaml.cs">
+      <DependentUpon>AddReviewDetailsLt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\AddReviewDetailsSchool.xaml.cs">
+      <DependentUpon>AddReviewDetailsSchool.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\AlarmData.cs" />
     <Compile Include="Manager\detectdetails.xaml.cs">
       <DependentUpon>detectdetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\detectdetailsCy.xaml.cs">
+      <DependentUpon>detectdetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\detectdetailsLt.xaml.cs">
+      <DependentUpon>detectdetailsLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\detectDetailsReview.xaml.cs">
       <DependentUpon>detectDetailsReview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\detectDetailsReviewCy.xaml.cs">
+      <DependentUpon>detectDetailsReviewCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\detectDetailsReviewLt.xaml.cs">
+      <DependentUpon>detectDetailsReviewLt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\detectDetailsReviewSchool.xaml.cs">
+      <DependentUpon>detectDetailsReviewSchool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\detectdetailsSchool.xaml.cs">
+      <DependentUpon>detectdetailsSchool.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\Exporting_window.xaml.cs">
       <DependentUpon>Exporting_window.xaml</DependentUpon>
@@ -836,14 +1003,41 @@
     <Compile Include="Manager\SysMonthAnalysis.xaml.cs">
       <DependentUpon>SysMonthAnalysis.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\SysNewDetectCy.xaml.cs">
+      <DependentUpon>SysNewDetectCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysNewDetectCyQuery.xaml.cs">
+      <DependentUpon>SysNewDetectCyQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysNewDetectLt.xaml.cs">
+      <DependentUpon>SysNewDetectLt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysNewDetectLtQuery.xaml.cs">
+      <DependentUpon>SysNewDetectLtQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysNewDetectSchool.xaml.cs">
+      <DependentUpon>SysNewDetectSchool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysNewDetectSchoolQuery.xaml.cs">
+      <DependentUpon>SysNewDetectSchoolQuery.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\SysPersonManager.xaml.cs">
       <DependentUpon>SysPersonManager.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\SysQuarterAnalysis.xaml.cs">
       <DependentUpon>SysQuarterAnalysis.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\SysReviewInfoCy.xaml.cs">
+      <DependentUpon>SysReviewInfoCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysReviewInfoLt.xaml.cs">
+      <DependentUpon>SysReviewInfoLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\SysReviewInfoSc.xaml.cs">
       <DependentUpon>SysReviewInfoSc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SysReviewInfoSchool.xaml.cs">
+      <DependentUpon>SysReviewInfoSchool.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\SysReviewLog.xaml.cs">
       <DependentUpon>SysReviewLog.xaml</DependentUpon>
@@ -887,6 +1081,12 @@
     <Compile Include="Manager\UcDayReportCountry.xaml.cs">
       <DependentUpon>UcDayReportCountry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\UcDayReportDetailsCy.xaml.cs">
+      <DependentUpon>UcDayReportDetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcDayReportDetailsLt.xaml.cs">
+      <DependentUpon>UcDayReportDetailsLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\UcDayReportDetailsSc.xaml.cs">
       <DependentUpon>UcDayReportDetailsSc.xaml</DependentUpon>
     </Compile>
@@ -896,14 +1096,26 @@
     <Compile Include="Manager\SysNewDetectScQuery.xaml.cs">
       <DependentUpon>SysNewDetectScQuery.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\UcDayReportDetailsSchool.xaml.cs">
+      <DependentUpon>UcDayReportDetailsSchool.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\UcMainPage.xaml.cs">
       <DependentUpon>UcMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\UcMonthReportCountry.xaml.cs">
       <DependentUpon>UcMonthReportCountry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\UcMonthReportDetailsCy.xaml.cs">
+      <DependentUpon>UcMonthReportDetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcMonthReportDetailsLt.xaml.cs">
+      <DependentUpon>UcMonthReportDetailsLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\UcMonthReportDetailsSc.xaml.cs">
       <DependentUpon>UcMonthReportDetailsSc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcMonthReportDetailsSchool.xaml.cs">
+      <DependentUpon>UcMonthReportDetailsSchool.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\UcReviewdetails.xaml.cs">
       <DependentUpon>UcReviewdetails.xaml</DependentUpon>
@@ -926,8 +1138,17 @@
     <Compile Include="Manager\UcTaskReportCountry.xaml.cs">
       <DependentUpon>UcTaskReportCountry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\UcTaskReportDetailsCy.xaml.cs">
+      <DependentUpon>UcTaskReportDetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcTaskReportDetailsLt.xaml.cs">
+      <DependentUpon>UcTaskReportDetailsLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\UcTaskReportDetailsSc.xaml.cs">
       <DependentUpon>UcTaskReportDetailsSc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcTaskReportDetailsSchool.xaml.cs">
+      <DependentUpon>UcTaskReportDetailsSchool.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\UcUnrealizedModul.xaml.cs">
       <DependentUpon>UcUnrealizedModul.xaml</DependentUpon>
@@ -944,23 +1165,47 @@
     <Compile Include="Manager\UcWarningCountry.xaml.cs">
       <DependentUpon>UcWarningCountry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\UcWarningdetailsCy.xaml.cs">
+      <DependentUpon>UcWarningdetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcWarningdetailsLt.xaml.cs">
+      <DependentUpon>UcWarningdetailsLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\UcWarningdetailsSc.xaml.cs">
       <DependentUpon>UcWarningdetailsSc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcWarningdetailsSchool.xaml.cs">
+      <DependentUpon>UcWarningdetailsSchool.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\UcWarningReportCountry.xaml.cs">
       <DependentUpon>UcWarningReportCountry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\UcWarningReportDetailsCy.xaml.cs">
+      <DependentUpon>UcWarningReportDetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcWarningReportDetailsLt.xaml.cs">
+      <DependentUpon>UcWarningReportDetailsLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\UcWarningReportDetailsSc.xaml.cs">
       <DependentUpon>UcWarningReportDetailsSc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcWarningReportDetailsSchool.xaml.cs">
+      <DependentUpon>UcWarningReportDetailsSchool.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\UcYearReportCountry.xaml.cs">
       <DependentUpon>UcYearReportCountry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Manager\UcYearReportDetailsCy.xaml.cs">
+      <DependentUpon>UcYearReportDetailsCy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UcYearReportDetailsLt.xaml.cs">
+      <DependentUpon>UcYearReportDetailsLt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager\UcYearReportDetailsSc.xaml.cs">
       <DependentUpon>UcYearReportDetailsSc.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Manager\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
+    <Compile Include="Manager\UcYearReportDetailsSchool.xaml.cs">
+      <DependentUpon>UcYearReportDetailsSchool.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager\UserControls\DatePicker.xaml.cs" />
     <Compile Include="Manager\UserControls\TitleBarControl.xaml.cs">

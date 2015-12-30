@@ -170,9 +170,12 @@ namespace FoodSafetyMonitoring.Manager
                 {
                     case "0": grid_info.Children.Add(new UcWarningReportDetailsSc(dbOperation, reportDate_kssj.SelectedDate.ToString(), reportDate_jssj.SelectedDate.ToString(), dept_id, item_id, review_id));
                         break;
-                    case "1":
-                    case "2":
-                    case "3":
+                    case "1": grid_info.Children.Add(new UcWarningReportDetailsLt(dbOperation, reportDate_kssj.SelectedDate.ToString(), reportDate_jssj.SelectedDate.ToString(), dept_id, item_id, review_id));
+                        break;
+                    case "2": grid_info.Children.Add(new UcWarningReportDetailsCy(dbOperation, reportDate_kssj.SelectedDate.ToString(), reportDate_jssj.SelectedDate.ToString(), dept_id, item_id, review_id));
+                        break;
+                    case "3": grid_info.Children.Add(new UcWarningReportDetailsSchool(dbOperation, reportDate_kssj.SelectedDate.ToString(), reportDate_jssj.SelectedDate.ToString(), dept_id, item_id, review_id));
+                        break;
                     default: break;
                 }
             }

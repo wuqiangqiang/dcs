@@ -118,8 +118,23 @@ namespace FoodSafetyMonitoring.Manager
         void _tableview_DetailsRowEnvent(string id)
         {
             int orderid = int.Parse(id);
-            detectDetailsReview det = new detectDetailsReview(dbOperation, orderid);
-            det.ShowDialog();
+            switch (dept_type)
+            {
+                case "0": detectDetailsReview det = new detectDetailsReview(dbOperation, orderid);
+                    det.ShowDialog();
+                    break;
+                case "1": detectDetailsReviewLt detlt = new detectDetailsReviewLt(dbOperation, orderid);
+                    detlt.ShowDialog();
+                    break;
+                case "2": detectDetailsReviewCy detcy = new detectDetailsReviewCy(dbOperation, orderid);
+                    detcy.ShowDialog();
+                    break;
+                case "3": detectDetailsReviewSchool detschool = new detectDetailsReviewSchool(dbOperation, orderid);
+                    detschool.ShowDialog();
+                    break;
+                default: break;
+            }
+            
         }
 
         private void _export_Click(object sender, RoutedEventArgs e)

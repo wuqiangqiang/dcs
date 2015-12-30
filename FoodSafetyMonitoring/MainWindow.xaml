@@ -7,8 +7,8 @@
             <Setter  Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TabItem}">
-                        <Border x:Name="layout" BorderBrush="Gray" BorderThickness="1,1,1,0" Background="{TemplateBinding Background}"
-                               CornerRadius="3,3,0,0"  Margin="0,0,2,0">
+                        <Border x:Name="layout" BorderBrush="#c6cbd0" BorderThickness="1,1,1,0" Background="{TemplateBinding Background}"
+                               CornerRadius="0,0,0,0"  Margin="1,0,1,0" MouseDown="layout_MouseDown" Tag="{TemplateBinding Header}" >
                             <Grid Height="35">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition MinWidth="100"/>
@@ -16,7 +16,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock x:Name="_tabtxt" TextAlignment="Center" Text="{TemplateBinding Header}" Grid.Column="0" Margin="4,0,3,0" FontFamily="微软雅黑" 
 					        VerticalAlignment="Center"	HorizontalAlignment="Center" FontSize="14" Foreground="Black"/>
-                                <Button Content="X" Grid.Column="1"  Height="8" Width="8" Margin="4,1,3,2" 
+                                <Button Grid.Column="1"  Height="8" Width="8" Margin="4,1,3,2" 
 						    Tag="{TemplateBinding Header}" Click="Button_Click"
 						    Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center">
                                     <Button.Template>
@@ -28,7 +28,7 @@
                                                             <VisualBrush.Visual>
                                                                 <Path x:Name="btnPath" 
 													    Data="M0 0L10 10M0 10L10 0" Stroke="Gray"
-													    StrokeThickness="1"/>
+													    StrokeThickness="2"/>
                                                             </VisualBrush.Visual>
                                                         </VisualBrush>
                                                     </Rectangle.Fill>
@@ -46,8 +46,8 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Background" Value="#c5cacf"/>
-                                <Setter TargetName="layout" Property="Margin" Value="2,0,2,-1"/>
+                                <Setter Property="Background" Value="#c6cbd0"/>
+                                <Setter TargetName="layout" Property="Margin" Value="2,0,2,0"/>
                                 <!--<Setter TargetName="_tabtxt" Property="Foreground" Value="White"/>-->
                             </Trigger>
                             <Trigger Property="IsSelected" Value="false">
@@ -168,17 +168,17 @@
                 <TextBlock x:Name="_text_8" FontFamily="微软雅黑"  Foreground="White" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,22"/>
             </Grid>
         </Grid>
-        <Grid Grid.Row="2" x:Name="grid_mainpage">
+        <Grid Grid.Row="2" x:Name="grid_mainpage" Visibility="Hidden">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition MaxWidth="210" />
                 <!--<ColumnDefinition Width="6"/>-->
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Grid x:Name="grid_Menu" Background="#ebebeb" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="grid_Menu" Background="#ebebeb" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,2,0,0">
             </Grid>
             <!--<GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="6"></GridSplitter>-->
             <Grid x:Name="grid_Component" Grid.Column="1">
-                <TabControl x:Name="_tab" Background="White">
+                <TabControl x:Name="_tab" Background="White" BorderThickness="0,3,0,0" BorderBrush="#c6cbd0">
                 </TabControl>
             </Grid>
         </Grid>

@@ -265,9 +265,12 @@ namespace FoodSafetyMonitoring.Manager
                 {
                     case "0": grid_info.Children.Add(new UcDayReportDetailsSc(dbOperation, reportDate.SelectedDate.ToString(), dept_id, item_id, result_id));
                               break;
-                    case "1":
-                    case "2":
-                    case "3":
+                    case "1": grid_info.Children.Add(new UcDayReportDetailsLt(dbOperation, reportDate.SelectedDate.ToString(), dept_id, item_id, result_id));
+                              break;
+                    case "2": grid_info.Children.Add(new UcDayReportDetailsCy(dbOperation, reportDate.SelectedDate.ToString(), dept_id, item_id, result_id));
+                              break;
+                    case "3": grid_info.Children.Add(new UcDayReportDetailsSchool(dbOperation, reportDate.SelectedDate.ToString(), dept_id, item_id, result_id));
+                              break;
                     default: break;
                 }
             }

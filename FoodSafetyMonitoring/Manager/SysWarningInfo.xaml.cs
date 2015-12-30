@@ -128,9 +128,12 @@ namespace FoodSafetyMonitoring.Manager
                 {
                     case "0": grid_info.Children.Add(new UcWarningdetailsSc(dbOperation, dept_id, item_id, object_id));
                         break;
-                    case "1":
-                    case "2":
-                    case "3":
+                    case "1": grid_info.Children.Add(new UcWarningdetailsLt(dbOperation, dept_id, item_id, object_id));
+                        break;
+                    case "2": grid_info.Children.Add(new UcWarningdetailsCy(dbOperation, dept_id, item_id, object_id));
+                        break;
+                    case "3": grid_info.Children.Add(new UcWarningdetailsSchool(dbOperation, dept_id, item_id, object_id));
+                        break;
                     default: break;
                 }
             }
